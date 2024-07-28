@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Debe tomar como minimo toda la pantalla */
+    min-height: 100vh;
+
+    grid-template-areas:
+        "header header header"
+        "main main aside"
+        "main main aside"
+        "footer footer .";
+}
+
+.container header {
+    background-color: royalblue;
+
+    /* Dar un nombre */
+    grid-area: header;
+
+}
+
+.container aside {
+    background-color: yellow;
+    grid-area: aside;
+}
+
+.container main {
+    background-color: blue;
+    grid-area: main;
+}
+
+.container footer {
+    background-color: red;
+    grid-area: footer;
+}

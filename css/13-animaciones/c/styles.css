@@ -1,0 +1,47 @@
+body {
+    display: grid;
+
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.pulser {
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    border-radius: 50%;
+    position: relative;
+
+
+    animation: mover;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: normal;
+    animation-fill-mode: forwards;
+
+    &:hover {
+        animation-play-state: paused;
+        opacity: 0.7;
+        /* Filtro de contraste*/
+        filter: contrast(150%);
+        cursor: progress;
+    }
+
+}
+
+/* Fotogramas claves */
+@keyframes mover {
+
+    /* Estado inicial */
+    from {
+        transform: translateX(0px);
+    }
+
+    /* Final de la animación */
+    to {
+        transform: translateX(500px);
+    }
+
+}

@@ -1,0 +1,65 @@
+// Variables
+@bgColor: lightblue;
+@b: body;
+@fuente: Arial;
+
+@{b} {
+    background-color: @bgColor;
+}
+
+h1 {
+    font-family: @fuente;
+}
+
+// Anidación
+.info {
+    ul {
+        li {
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Mixins
+.sombras(@size) {
+    box-shadow: 0px 0px @size rgb(255, 0, 0);
+    text-shadow: 0px 0px 5px rgb(255, 0, 0);
+}
+
+.info {
+    // Puede aplicar el mixin a cualquier elemento
+    .sombras(10px);
+}
+
+// Operadores
+h1 {
+    font-size: 30px + 10px;
+}
+
+// Mixins condicionales
+// Funciones que van aplicarse cuando se cumpla una condición
+.textoNegro (@value) when (@value=true) {
+    color: black;
+}
+
+h1 {
+    color: blue;
+    // si es true, se aplica la condición
+    .textoNegro(false)
+}
+
+// Bucles
+// se crea un mixin loop con un contador que cuando se cumpla la condición
+.loop(@cont) when (@cont > 0) {
+    // Ejecuta el codigo que tiene dentro
+    .loop((@cont - 1));
+    height: (900px / @cont);
+}
+
+.info {
+    height: 900px;
+    .loop(5)
+}

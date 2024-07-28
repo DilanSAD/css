@@ -1,0 +1,45 @@
+section,
+div {
+    background-color: aqua;
+    width: 250px;
+    height: 250px;
+    border: 5px solid red;
+    margin: 0px auto;
+    margin-bottom: 20px;
+
+    /* Especifico: va en orden de reloj */
+    border-radius: 50px 10px 4px 61px;
+    /* General: cajas con la misma altura y anchura con 999px o 50% son redondas */
+    border-radius: 999px;
+}
+
+/* SOMBRAS x, y, difumiado, color del difuminado */
+section {
+    /* Con una , puedo poner varias sombras*/
+    text-shadow: 0px 2px 1px #333, 0px 0px 4px #70b231;
+
+    /* Sombra en exterior en texto */
+    text-shadow: 5px 5px 2px gray;
+    /* Sombra en interior en texto */
+    text-shadow: 5px 5px 2px gray inset;
+
+    /* Sombra exterior en caja */
+    box-shadow: 5px 5px 2px darkblue;
+    /* Sombra interior en caja */
+    box-shadow: 5px 5px 2px rgb(0, 0, 0) inset;
+
+
+    /* CONTORNO no afecta el cotenido ni el borde */
+    outline: 3px solid rgb(140, 237, 4);
+}
+
+div {
+    /* Color del contorno */
+    outline-color: rgb(111, 0, 255);
+    /* Estilo del contorno */
+    outline-style: dashed, dotted, double, ridge;
+    /* Que tan ancho */
+    outline-width: 10px;
+    /* Espacio entre el elemento y el contorno */
+    outline-offset: 10px;
+}

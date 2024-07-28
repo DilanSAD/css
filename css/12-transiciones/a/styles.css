@@ -1,0 +1,90 @@
+/* TRANSICIONES cuando haya algún cambio en la web
+que vaya acompañado de un efecto */
+
+button {
+    display: block;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+
+    /* Al elemento principal debo aplicarle la transition */
+    transition: border 3s;
+    transition: all 500ms;
+    /* Por medio de comas puedo decidir que atributos seran tomados en cuenta
+    por la transition (estos deben de encontrase en el efecto a realizar) */
+    transition: border-radius 5s, background-color 3s, border 500m;
+}
+
+button:hover {
+    border-radius: 20px;
+    background-color: orangered;
+    border: 5px solid red;
+}
+
+body {
+    display: grid;
+
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.pulser {
+    margin-top: 200px;
+    width: 40px;
+    height: 40px;
+    background-color: brown;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    /* Por defecto la duración final es */
+    transition-duration: 0;
+    transition-duration: 500ms;
+
+    /* Por defecto toma todas las animaciones */
+    transition-property: all;
+    transition-property: none;
+    /* Le puedo indicar que valores adaptar */
+    transition-property: scale, background-color;
+
+    /* velocidad de la transición por defecto */
+    transition-timing-function: linear;
+    /* Al principio va más lento, al final más rapido */
+    transition-timing-function: ease-in;
+    /* Inicia a toda velocidad, finaliza más lento */
+    transition-timing-function: ease-in;
+    /* En la salida, y entrada es con calma
+    en el medio tiene su velocidad maxima */
+    transition-timing-function: ease-in-out;
+    /* Parecido al easea-int-out pero comienza más rapido  */
+    transition-timing-function: ease;
+    /* también se puede hacer pasos en la velocidad de la transición */
+    transition-timing-function: steps(50);
+
+    /* Por defecto */
+    transition-delay: 0;
+    /* El tiempo especificado es el que tardara en comenzar la transición */
+    transition-delay: 100ms;
+
+    /* Forma abreviada: especificación, duración final, animación, delay */
+    transition: all 300ms linear 2s;
+
+    /* Por medio de una , puedo tomar cada propiedad */
+    transition: background-color 300ms linear 2s, scale 500ms ease-in-out;
+}
+
+.pulser:hover {
+    background-color: violet;
+
+    /* Visualmente el elemento dobla sus proporciones pero no crece en espacio */
+    scale: 2;
+
+    transition-duration: 3s;
+}

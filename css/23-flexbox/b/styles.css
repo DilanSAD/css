@@ -1,0 +1,65 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: antiquewhite;
+}
+
+.parent {
+    width: 800px;
+    height: 800px;
+    border: 1px splid mediumorchid;
+    background-color: aqua;
+    display: flex;
+
+    flex-direction: column;
+
+    /* Para que los elementos salten y se distribuyan el espacio 
+
+    nowrap: Cada elemento se ajusta en una sola línea.
+    wrap: los elementos se envuelven alrededor de líneas adicionales.
+    wrap-reverse: Los elementos se envuelven alrededor de líneas adicionales en reversa. */
+
+    /* Por defecto */
+    flex-wrap: nowrap;
+    /* Se acomodan para que todos los elementos del contenedor tengan su tamaño justo*/
+    flex-wrap: wrap;
+
+    /* Me permite especificar flex-direction y flex-wrap en uno */
+    flex-flow: row wrap;
+
+    /* Distribución del espacio en el eje principal */
+    /* A los laterales no deja espacio, entre los elementos es que se van a separar */
+    justify-content: space-between;
+    /* Los elementos se reacomodan manteniendo el mismo espacio al rededor de ellos */
+    justify-content: space-around;
+    /* El mismo espacio entre cada elemento */
+    justify-content: space-evenly;
+    /* Los elementos se reacomodan tomando como prioridad el principio del contenedor */
+    justify-content: flex-start;
+    /* Los elementos se reacomodan tomando como prioridad el final del contenedor */
+    justify-content: flex-end;
+    /* Los elementos se reacomodan en el medio del contenedor */
+    justify-content: center;
+
+    /* Para modificar el punto relativo de los items
+    a nivel del contenedor según eje cruzado */
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+
+    /* Para especificar la separación entre elementos */
+    gap: 20px;
+
+    /* Para modificar el punto relativo de los items
+    según el eje cruzado a nivel de elemento */
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+}
+
+.item {
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+}

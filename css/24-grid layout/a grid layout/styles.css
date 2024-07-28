@@ -1,0 +1,134 @@
+body {
+    text-align: center;
+}
+
+/* Es una cuadrícula (2 dimenciones)
+Los elementos pueden tener tamaños fijos o flexibles
+podemos posicionar elementos en cualquier sitio
+un elemento no tiene por qué seguir un orden especifico
+se puede poner un elemento encima de otro */
+.layout {
+    /* DEFINIR EL GRID */
+    /* Grid solo actua donde le diga
+    en cada lugar que lo necesite debo tener*/
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+
+    /* ESPACIO ENTRE ELEMENTOS */
+    border: 3px solid orangered;
+    padding: 10px;
+    gap: 10px;
+}
+
+.layout .caja {
+    font-size: 20px;
+    border: 4px solid #222;
+}
+
+.layout .yellow {
+    background-color: yellow;
+
+    /* Se puede indicar desde donde comienza el elemento en cualquier columna */
+    grid-column-start: 1;
+    /* Donde termina ese elemento en la cuadrícula */
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    /* Forma abreviada para indicar donde comienza y termina */
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+}
+
+.layout .blue {
+    background-color: blue;
+    grid-column: 1 / 3;
+    grid-row: 2 / 5;
+}
+
+.layout .red {
+    background-color: red;
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+}
+
+.layout .pink {
+    background-color: pink;
+    grid-column: 3 / 4;
+}
+
+.layout .orange {
+    background-color: orange;
+    grid-column: 4 / 5;
+}
+
+.layout .green {
+    background-color: green;
+    grid-column: 1 / 5;
+}
+
+.layout .gray {
+    background-color: gray;
+    grid-column: 1 / 4;
+}
+
+.layout .rebe {
+    background-color: rebeccapurple;
+}
+
+
+.container {
+    background-color: lightcoral;
+    border: 3px solid black;
+    border-radius: 30px;
+
+    /* Por defecto */
+    display: block;
+    /* Para que sea una cuadrícula */
+    display: grid;
+
+    /* en que eje se genera la cuadrícula */
+    /* Por defecto */
+    grid-auto-flow: row;
+    /* Todo en una columna */
+    grid-auto-flow: column;
+    /* Rellenar los espacios */
+    grid-auto-flow: dense;
+
+    /* Especificar cuantas columnas queemos en la cuadrícula
+    y el espacio que debe utilizar cada columna */
+    grid-template-columns: auto 100px auto 200px;
+    grid-template-columns: 50% 100px auto 10vh;
+    /* Fracciones: indicar el tamaño de las columnas de forma proporcinal */
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Para evitar copiar los mismos valores */
+    grid-template-columns: 50px repeat(2, 1fr 50px);
+    /* Especificar el minimo del tamaño de la columna */
+    grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
+
+    /* Especificar el espacio que se reparte entre las filas */
+    grid-template-rows: 150px 110px;
+
+    /* Para tener una separación en las columnas se utiliza */
+    grid-column-gap: 20px;
+    /* Para tener una separación en las filas se utiliza */
+    grid-row-gap: 40px;
+    /* Para especificar separación entre columnas y filas*/
+    gap: 20px 40px;
+    gap: 30px;
+
+    /* Cada fila generada automaticamente toma el tamaño */
+    grid-auto-rows: 50px;
+}
+
+/* Todos los div dentro del container */
+.container div {
+    background: lightblue;
+    border: 2px solid blue;
+
+    border-radius: 10px;
+}

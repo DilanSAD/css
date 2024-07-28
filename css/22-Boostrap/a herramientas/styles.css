@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    height: 500px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+}
+
+.caja {
+    background-color: aqua;
+}

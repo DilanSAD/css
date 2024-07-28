@@ -1,0 +1,68 @@
+h1 {
+    text-align: center;
+    text-align: justify;
+    text-align: left;
+    text-align: right;
+
+    text-justify: none, auto, inter-word;
+
+    /* Altura de línea
+    espacio entre cada línea por arriba y abajo */
+    line-height: 300px;
+
+    text-transform: uppercase;
+
+    /* Balancear de forma más agresiva, se usa más en títulos */
+    text-wrap: balance;
+}
+
+h2 {
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration: line-through;
+}
+
+p {
+    /* Balancear todo el párrafo */
+    vertical-align: auto;
+
+    /* Con cada salto de linea hay un identado, identación, sangría de texto */
+    text-indent: 15px;
+
+    /* Espacio entre palabras */
+    word-spacing: 100px;
+
+    /* Espacio entre caracteres */
+    letter-spacing: 10px;
+
+    /* Comportamiento de los espacios */
+    white-space: normal, pre, pre-line, pre-wrap;
+
+    /* Ancho de las tabulaciones */
+    tab-size: 10px;
+
+    /* Dirección de texto */
+    direction: ltr;
+}
+
+
+
+table {
+    border-collapse: separate;
+    /* Quitar el borde de una tabla */
+    border-collapse: collapse;
+    /* Espacio entre cada columna y fila */
+    border-spacing: 10px;
+    /* Desaparecer los campos vacios de la tabla */
+    empty-cells: hide;
+
+}
+
+ul {
+    /* Cada elemento de la lista tiene su puntero con imagen */
+    list-style-image: url(imagen.png);
+    /* Cambiar el puntero de cada elemento si es una lista desordenada */
+    list-style-type: disc, circle, square, disclosure-open, disclosure-closed, decimal, upper-alpha, decimal-leading-zero, lower-roman, upper-roman, lower-latin, upper-latin, none;
+    /* Agrega una identación */
+    list-style-position: outside, inside;
+}

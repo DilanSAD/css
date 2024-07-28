@@ -1,0 +1,22 @@
+SELECTOR Y PROPIEDADES
+
+grid para definir layaout
+https://grid.malven.co/
+
+flexbox dentro de las cajas de la estructura principal
+https://flexbox.malven.co/
+
+floats maquetar imagenes o flotar imagenes / mover contenido de texto
+
+
+PSD  de diseño a HTML y CSS
+
+LOS ELEMENTOS EN LINEA SE COMPORTAN COMO TEXTO, POR LO TANTO NO TIENEN NI ANCHO NI ALTO
+
+
+Responsive: cuando crece la pantalla como toma ese espacio
+adaptive: cuando se encoje la pantalla como se adapta
+
+Estrategías
+    -Mobile first
+    -Desktop first

@@ -1,0 +1,15 @@
+npm install -g sass // para instalar
+
+
+la extensión del archivo también puede ser:
+.sass
+
+
+¿ cómo convierto codigo de sass a css, cómo transpilar ?
+
+en la terminal:
+
+sass --watch ___.scss styles.css
+comando reviso archivoEntrada archivoSalida
+
+
