@@ -1,0 +1,38 @@
+.div {
+    /* FUNCIONES */
+    /* calc puede realizar operaciones / * + - */
+    width: calc(300px / 2);
+    height: calc(300px / 2);
+
+    /* Toma el menor valor entre los disponibles */
+    width: min(300px, 20%);
+    /* Toma el mayor valor entre los disponibles */
+    height: max(300px, 20%);
+
+    /*El primer valor es el valor minimo, el segundo el valor que quiero, y el tercero el maximo */
+    width: clamp(200px, 40%, 500px);
+}
+
+img {
+    /* RUTA DE RECORTE determina la parte del elemento que se va a mostrar */
+    /* Muestra una parte de la imagen en circulo */
+    clip-path: circle(10%);
+
+    /* Muestra el poligono especificado */
+    clip-path: polygon(60% 0, 100% 50%, 50% 100%, 0 60%);
+
+    /* Ellipse primer valor horizontal segundo vertical, con at puede comenzar en un punto en concreto */
+    clip-path: ellipse(100px 116px at 50% 20%);
+
+
+    /* TRANSFORMACIONES no afectan el modelo de caja */
+    /* Deforma la caja */
+    transform: skew(30deg);
+    transform: skewX(30deg);
+    transform: skewY(30deg);
+
+    /* Escala las proporciones del elemento */
+    transform: scale(2);
+    /* Mover el elemento */
+    transform: scale(2) translateX(50%) rotate(150deg);
+}

@@ -1,0 +1,55 @@
+.container {
+    background-color: lightcoral;
+    border: 3px solid black;
+    border-radius: 30px;
+    display: grid;
+
+    grid-auto-rows: 100px;
+    gap: 10px;
+
+    height: 500px;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Dentro del contexto de la cuadrícula alinear elementos en línea por defecto
+    referencia horizontal */
+    justify-items: normal;
+    justify-items: stretch;
+    justify-items: center;
+    justify-items: start;
+    justify-items: end;
+
+    /* Ajustar el contenido a alinearlo */
+    justify-content: space-around;
+    justify-content: flex-start;
+
+    /* Alineación en bloque, de arriba abajo
+    referencia vertical */
+    align-items: center;
+
+    align-content: center;
+}
+
+/* Todos los div dentro del container */
+.container div {
+    background: lightblue;
+    border: 2px solid blue;
+    border-radius: 6px;
+
+}
+
+.container div:first-child {
+    justify-self: center;
+    align-self: normal;
+
+}
+
+.container div:nth-child(2) {
+    justify-self: end;
+    align-self: center;
+}
+
+.container div:nth-last-child(1) {
+    justify-self: normal;
+    align-self: start;
+}

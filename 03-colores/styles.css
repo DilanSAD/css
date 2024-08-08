@@ -1,0 +1,64 @@
+/* Colores del sistema */
+h1 {
+    /* Colores por palabras clave */
+    color: mediumaquamarine;
+}
+
+/* Colores hexadecimales */
+h2 {
+    /* Se pueden agregar 2 digitos a un hexadecimal para cambiar la transparencia
+    transparente 00 a 100% con ff */
+    color: #00000011;
+
+    /* Hexadecimales con 3 digitos, se repite cada digito 2 veces  0099ff */
+    color: #09f;
+}
+
+/* Colores RGB */
+p {
+    /* Red, green, blue, (opcional) opacidad */
+    color: rgb(0 0 0 / 50%);
+}
+
+/* Colores RGBA (ya se considera Legacy) */
+h1 {
+    /* Igual que rgb pero con transparencia */
+    color: rgba(0, 0, 0, 50%);
+}
+
+/* Colores hsl */
+p {
+    /* Matiz, saturación, luminosidad */
+    color: hsl(348, 83%, 44%);
+}
+
+/* Colores lch */
+h1 {
+    /* Luminosidad, croma, matiz */
+    color: lch(57.06% 100 0);
+}
+
+/* Colores oklch */
+h1 {
+    /* Luminosidad, croma, matiz */
+    color: oklch(57.06% 0.1 19);
+}
+
+h2 {
+    color: red;
+    /* Color que sirve para cualquier elemento */
+    color: transparent;
+    /* Toma el color que tenga el elemento padre */
+    border: 1px solid currentColor;
+
+    /* GRADIENTES */
+    /* Degradados lineales con to especifico desde donde comienza y les puedo dar porcentaje */
+    background: linear-gradient (to top right, orange 10%, yellow 50%, red 10%, blue);
+    /* Se usa repeating con background-size: __ __ para realizar un rayado */
+
+    /*Degradados radiales */
+    /* Surge desde el centro, puedo indicar como se espande: circle, 300px, ellipse, closet-corner */
+    background: radial-gradient(farthest-corner at top 50px, red 50%, blue 40%, yellow 10%);
+
+
+}

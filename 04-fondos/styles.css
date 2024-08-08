@@ -1,0 +1,80 @@
+body {
+    /* Poner imagen de fondo */
+    background-image: url(img/imagen.jpg);
+    /* Se pueden establecer varias imagenes para un mismo elemento */
+    background-image: url(img/imagen.jpg), url(img/imagen2.jpg);
+
+    /* Por defecto repite el fondo */
+    background-repeat: repeat;
+    /* Se puede establecer como se repite */
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: space;
+    background-repeat: round;
+
+    /* Definir el tamaño del fondo */
+    background-size: 100% 100%;
+    /* Junto con position center */
+    background-size: cover;
+    background-size: contain;
+
+    /* Para que el fondo se quede fijo
+    el contenido acompaña el scroll */
+    background-attachment: fixed;
+
+    /* Para posicionamiento de lo que muestro de la imagen */
+    background-position: left bottom;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+img {
+    /* Ahora se pueden crear formas en una imagen o caja con */
+    clip-path: circle(50%);
+    clip-path: polygon(50%, 10%, 100%, 50%, 50%, 100%, 0%);
+    clip-path: ellipse(100px 150px at 30% 15%);
+
+    /* Agregar filtros */
+    /* Escala de grises */
+    filter: grayscale(50%);
+    /* Sepia */
+    filter: sepia(20%);
+    /* Saturación */
+    filter: saturate(100%);
+    /* Desenfoque, difuminado */
+    filter: blur(10px);
+    /* Transparencia */
+    filter: opacity(20%);
+    /* Constrate, brillo*/
+    filter: contrast(50%);
+    /* Brillo */
+    filter: brightness(20%);
+    /* Invertir colores. queda como un negativo */
+    filter: invert(100%);
+    /* Sombra que de adapta a los bordes si fuera una imagen recortada se adapta */
+    filter: drop-shadow(10px 10px 10px black);
+    /* Rotación de matiz de colores */
+    filter: hue-rotate(100deg);
+
+
+    /* Para conservar la relación de aspecto para que se quede siempre igual
+    si algo no esta cargado en la página no quiero que algo más ocupe su espacio
+    y mueva todo el flujo, para eso indicamos la relación de aspecto */
+    aspect-ratio: 1;
+
+    /* La imagen no pierde relación aspecto ocupando todo el espacio posible */
+    object-fit: cover;
+    /* La imagen se va centrar dentro del contenedor padre */
+    object-fit: contain;
+    /* Rellena la imagen sin importar la relación aspecto */
+    object-fit: fill;
+}
+
+#caja {
+    border: 5px solid black;
+    padding: 10px;
+
+    background-color: aqua;
+    color: red;
+}
