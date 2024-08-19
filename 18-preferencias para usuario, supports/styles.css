@@ -31,7 +31,7 @@ body {
     width: 100vw;
     height: 100vh;
 
-    /* Para estilar la barra del scroll */
+    /* Para estilar la barra del scroll el primer color es la navegación y el segundo el fondo de la barra */
     scrollbar-color: blue yellow;
 
     scrollbar-width: auto;
